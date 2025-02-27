@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <nav class="navBarContainer">
+
+        <ul class="navBarContent">
+
+            <li class="home">
+                <a href="index.html">Home</a>
+            </li>
+
+            <li class="shop">
+                <a href="shop.html">Shop</a>
+            </li>
+
+
+            <li class="ContactMe, contactMeActive">
+                <a href="contactMe.html">Contact Me</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="imgBackground">
+        <img src="Resources/ContactMe/mountain-night-sky-landscape-vector.jpg">
+    </div>
+
+    <div class="contactFormContainer">
+        
+        <form action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+            
+            <div class="header">
+                <h2 class="contactHeader">Contact Us</h2>
+            </div>
+
+            <input type="hidden" name="access_key" value="7a124cf0-f7ed-4c6b-8889-60f65e62953d">
+            <input type="text" name="name" placeholder="Name:" class="contactInputs" required>
+            <input type="email" name="email" placeholder="Email:" class="contactInputs" required>
+            <textarea name="message" placeholder="Message:" class="contactInputs messageBox" required></textarea>
+            <button type="submit" class="btnSubmit">Submit</button>
+
+        </form>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

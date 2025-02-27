@@ -1,0 +1,627 @@
+@font-face {
+    font-family: 'Adlam Display';
+    src: url('Resources/ADLaMDisplay-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    scrollbar-gutter: white;
+}
+
+
+/**************************
+ *  General Styles        *
+ **************************/
+
+
+body {
+    background: #242424;
+    color: white; 
+    font-family: 'Adlam Display';
+    font-weight: bold; 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0px; 
+    list-style-type: none;
+}
+
+
+/* Smooth scrolling behavior for the page */
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    
+}
+
+
+
+/**************************
+ *  Navigation Bar        *
+ **************************/
+
+
+.navBarContainer {
+    width: 780px;
+    height: 60px;
+    background-color: black; 
+    border-radius: 180px; 
+    margin-top: 20px;
+    border: solid 2px #00BBFF;
+    box-shadow: 0 4px 6px #00BBFF;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Adlam Display';
+}
+
+
+
+.navBarContent {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; 
+    margin-left: 37px;
+    border: solid 2px transparent;
+    padding: 0;
+}
+
+
+
+.home, .shop {
+    margin-right: 50px;
+}
+
+
+/* Navigation bar animations*/
+.home{
+    position: relative;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0; 
+    height: 4px; 
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease; 
+}
+
+
+.home:hover {
+    color: #ffffff; 
+}
+
+.home:hover::after {
+    width: 110%;
+}
+
+.shop{
+    position: relative;
+}
+
+.shop::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease;
+}
+
+.home:hover{
+    color: white;
+}
+
+.shop:hover::after{
+    width: 110%;
+
+}
+
+.ContactMe{
+    position: relative;
+}
+
+.homeActive, .shopActive, .contactMeActive{
+    transform: scale(1.1);
+    text-decoration: underline 4px;
+    margin-right: 50px;
+
+}
+
+.ContactMe::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease;
+}
+
+.ContactMe:hover{
+    color: white;
+}
+
+.ContactMe:hover::after{
+    width: 110%
+}
+
+
+
+
+/**************************
+ *  Hero Section          *
+ **************************/
+
+
+ /* Container for the hero section */
+.heroSection {
+    width: 1180px;
+    height: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+/* Hero heading styling */
+.heroHeading {
+    width: fit-content;
+    height: auto;
+    font-family: 'Baloo Bhaijaan';
+    font-size: 48px;
+}
+
+
+
+.heroSubHeading {
+    width: 580px;
+    height: 210px;
+    font-family: 'Adlam Display';
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 35px; 
+}
+
+
+
+.heroSection2 {  
+    margin-left: 23px;
+}
+
+
+
+.customPC {
+    width: 577px;
+    height: 577px;
+    padding: 0;
+    margin-right: 0;
+    filter: drop-shadow(0 0px 4px rgb(255, 255, 255));
+}
+
+
+/* Shop button styles */
+.btnShop {
+    font-family: 'Adlam Display';
+    font-size: 18px;
+    color: white;
+    background-color: #00C8FF; /* Blue button background */
+    border-radius: 180px;
+    border: 0px transparent; /* Invisible border */
+    text-align: center;
+    transition: all 0.3s ease-out;
+    padding: 12px 17px; /* Button padding */
+    line-height: 14px; /* Line spacing */
+    margin-right: 77px; /* Add spacing */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 20px;
+}
+
+
+/* Hover effect for shop button */
+.btnShop:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 15px rgba(0, 170, 255, 0.6); /* Glow effect */
+    background-color: #0077cc; /* Darker blue on hover */
+    color: #f0f0f0; /* Light text on hover */
+}
+
+
+/* Services button styles */
+.btnServices {
+    font-family: 'Adlam Display';
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border-radius: 180px;
+    border: solid 2px #00BBFF; /* Blue border */
+    text-align: center;
+    transition: all 0.3s ease-out;
+    padding: 12px 17px;
+    line-height: 14px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+/* Hover effect for services button */
+.btnServices:hover {
+    background-color: #00BBFF;
+}
+
+.btnServices:active{
+    transform: scale(0.95);
+}
+
+
+
+
+/**************************
+ *  Monthly Drop PC       *
+ **************************/
+
+
+ /* Monthly drop section header */
+.dropSectionHeader {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-family: 'Baloo Bhaijaan';
+}
+
+
+/* Container for monthly drops */
+.monthlyDrops {
+    width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Monthly drop image styling */
+.monthlyDropPic {
+    width: 580px;
+    height: auto;
+}
+
+
+/* Details section for monthly drop */
+.monthlyDropDetails {
+    width: 580px;
+    height: 245px;
+    align-self: center; /* Center align */
+}
+
+
+/* Text details styling */
+.details {
+    font-size: 20px;
+    line-height: 35px; /* Line spacing */
+}
+
+
+/**************************
+ *  Services Section      *
+ **************************/
+
+
+ /* Services section header */
+.servicesHeading {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 156px;
+    margin-bottom: 40px;
+    font-family: 'Baloo Bhaijaan';
+}
+
+
+/* Container for services section */
+.servicesSection {
+    width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Even spacing */
+    margin-bottom: 100px;
+}
+
+
+/* Service images */
+.servicesPic {
+    width: 176px;
+    height: auto;
+    margin-left: 102px;
+}
+
+
+/* Service card styling */
+.servicesCard {
+    width: 380px;
+    height: auto;
+}
+
+
+/* Subheading for service cards */
+.servicesSubHeading {
+    margin-left: 91px;
+    margin-right: 91px;
+    font-size: 32px;
+    font-family: 'Baloo Bhaijaan';
+    text-align: center;
+}
+
+
+/* Service description text */
+.txtServices {
+    text-align: center;
+}
+
+
+/* Button for service details */
+.btnDetails {
+    width: 105px;
+    height: 38px;
+    margin-top: 22px;
+    margin-left: 137px;
+    margin-right: 137px;
+    background-color: transparent;
+    border: solid 2px #00C8FF; /* Blue border */
+    border-radius: 180px;
+    font-family: 'Adlam Display';
+    font-size: 18px;
+    color: white;
+    transition: 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+/* Hover effect for detail buttons */
+.btnDetails:hover {
+    background-color: #00BBFF;
+}
+
+
+
+
+
+/**************************
+ *  Shop Section          *
+ **************************/
+
+.disclaimer{
+    width: 1080px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.warning{
+    font-family: 'Baloo Bhaijaan';
+}
+
+ .shopBlock img, h2, h3, button{
+    padding: 0;
+    margin: 0;
+}
+
+.imgPc{
+    width: 300px;
+    height: 300px;
+}
+
+.shopSection{
+    width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    padding: 0;
+}
+
+.shopSection2{
+    width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.pcName{
+    font-family: 'Adlam Display';
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pcPrice{
+    font-family: 'Adlam Display';
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.shopBlock{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+.shopBlock:hover {
+    transform: scale(1.05);
+}
+
+.buyPcbtn{
+    width: 95px;
+    height: 38px;
+    border: solid 2px #00C8FF;
+    border-radius: 180px;
+    background-color: transparent;
+    margin-top: 24px;
+    color: white;
+    font-family: 'Adlam Display';
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buyPcbtn:hover{
+    background-color: #00c8ff;
+}
+
+.buyPcbtn:active{
+    transform: scale(0.95);
+}
+
+
+
+/**************************
+ *  Contact Me            *
+ **************************/
+
+.contactForm h2, input, textarea, button{
+    padding: 0;
+    margin: 0;
+}
+
+.imgBackground {
+    position: fixed; /* Sticks to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps it behind other elements */
+    background-image: url('Resources/ContactMe/mountain-night-sky-landscape-vector.jpg');
+    background-size: cover; /* Ensures the image scales */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Contact Form Container */
+.contactFormContainer {
+    margin-top: 120px;
+    height: 610px;
+    width: 485px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(15px);
+    border-radius: 40px;
+    align-content: center;
+    align-items: center;
+}
+
+/* Header Styling */
+.contactHeader {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 70px;
+}
+.header{
+    margin-bottom: 70px;
+}
+
+/* Contact Form Input Fields */
+.contactInputs {
+    width: 455px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 180px;
+    transition: all 0.3s ease-in;
+    border: none;
+    outline: none;
+    font-family: 'Adlam Display';
+    font-size: 16px;
+    color: black;
+    
+}
+
+.contactInputs::placeholder{
+    font-family: 'Adlam Display';
+    font-size: 16px;
+    color: #00C8FF;
+}
+
+.messageBox{
+    padding-top: 30px;
+    height: 280px;
+    border-radius: 40px;
+}
+
+.contactInputs:focus{
+    outline: solid 3px #00C8FF;
+}
+
+.btnSubmit{
+    width: 95px;
+    height: 38px;
+    border: solid 2px #00C8FF;
+    border-radius: 180px;
+    background-color: transparent;
+    color: white;
+    font-family: 'Adlam Display';
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-left: 195px;
+}
+
+.btnSubmit:hover{
+    background-color: #00c8ff;
+}
+
+.btnSubmit:active{
+    transform: scale(0.95);
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .heroSection{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heroHeading{
+        font-size: 32px;
+    }
+
+
+}
