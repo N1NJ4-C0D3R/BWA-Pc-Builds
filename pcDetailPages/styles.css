@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Adlam Display';
+    src: url('../Resources/ADLaMDisplay-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    scrollbar-gutter: white;
+    padding: 0;
+    margin: 0;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+/**************************
+ *  General Styles        *
+ **************************/
+
+
+body {
+    background: #242424;
+    color: white; 
+    font-family: 'Adlam Display';
+    font-weight: bold; 
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0px; 
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+
+/* Smooth scrolling behavior for the page */
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    
+}
+
+
+
+/**************************
+ *  Navigation Bar        *
+ **************************/
+
+
+.navBarContainer {
+    width: 780px;
+    height: 60px;
+    background-color: black; 
+    border-radius: 180px; 
+    border: solid 2px #00BBFF;
+    box-shadow: 0 4px 6px #00BBFF;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Adlam Display';
+    align-items: center;
+    
+}
+
+
+
+.navBarContent {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; 
+    margin-left: 37px;
+    border: solid 2px transparent;
+    padding: 0;
+}
+
+
+
+.home, .shop {
+    margin-right: 50px;
+}
+
+
+/* Navigation bar animations*/
+.home{
+    position: relative;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0; 
+    height: 4px; 
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease; 
+}
+
+
+.home:hover {
+    color: #ffffff; 
+}
+
+.home:hover::after {
+    width: 110%;
+}
+
+.shop{
+    position: relative;
+}
+
+.shop::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease;
+}
+
+.home:hover{
+    color: white;
+}
+
+.shop:hover::after{
+    width: 110%;
+
+}
+
+.ContactMe{
+    position: relative;
+}
+
+.homeActive, .shopActive, .contactMeActive{
+    transform: scale(1.1);
+    text-decoration: underline 4px;
+    margin-right: 50px;
+
+}
+
+.ContactMe::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease;
+}
+
+.ContactMe:hover{
+    color: white;
+}
+
+.ContactMe:hover::after{
+    width: 110%
+}
+
+
+
+/**************************
+ *  Image Slider          *
+ **************************/
+
+.images{
+    width: 980px;
+    height: 500px;
+    margin-top: 100px;
+    border-radius: 30px;
+    background-color: rgb(160, 160, 160);
+}
+
+
+
+
+/**************************
+ *  First Section         *
+ **************************/
+
+
+
+.pcName{
+    font-family: 'Baloo Bhaijaan';
+    font-size: 32px;
+    text-align: left;
+    width: fit-content;
+    margin-top: 60px;
+}
+
+.container1{
+
+    width: 1180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.doubleSection1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.pcDescription{
+
+    width: 580px;
+    height: auto;
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-right: 40px;
+}
+
+.componentsHeading{
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.section2{
+    display: flex;
+    flex-direction: row;
+    width: 1180px;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.purchase{
+    width: 590px;
+    padding-left: 360px;
+    margin-top: 25px;
+}
+
+.benchMarks{
+    width: 590px;
+    padding-left: 20px;
+}
+
+.buyPc{
+    background-color: transparent;
+    font-family: 'Adlam Display';
+    font-size: 18px;
+    border: 2px solid #00BBFF;
+    border-radius: 180px;
+    cursor: pointer;
+    color: white;
+    padding: 8px 30px;
+    width: fit-content;
+    height: fit-content;
+    transition: 0.3s ease-in-out;
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+.buyPc:hover{
+    background-color: #00BBFF;
+}
