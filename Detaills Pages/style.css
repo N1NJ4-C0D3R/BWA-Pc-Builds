@@ -1,0 +1,300 @@
+@font-face {
+    font-family: 'Adlam Display';
+    src: url('../Resources/ADLaMDisplay-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    scrollbar-gutter: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+/**************************
+*  General Styles        *
+**************************/
+
+
+body {
+    background: #242424;
+    color: white; 
+    font-family: 'Adlam Display';
+    font-weight: bold; 
+    text-decoration: none;
+    margin: 0px; 
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Smooth scrolling behavior for the page */
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+        
+}
+
+.content{
+    width: 1180px;
+    height: auto;
+    margin-top: 110px;
+    padding: 10px 0;
+    display: flex;
+}
+
+
+
+/**************************
+*  Navigation Bar        *
+**************************/
+
+
+.navBarContainer {
+    width: 780px;
+    height: 60px;
+    background-color: black; 
+    border-radius: 180px; 
+    margin-top: 20px;
+    border: solid 2px #00BBFF;
+    box-shadow: 0 4px 6px #00BBFF;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Adlam Display';
+}
+
+
+
+.navBarContent {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row; 
+    margin-left: 37px;
+    border: solid 2px transparent;
+    padding: 0;
+}
+
+
+
+.home, .shop {
+    margin-right: 50px;
+}
+
+
+/* Navigation bar animations*/
+.home{
+    position: relative;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0; 
+    height: 4px; 
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease; 
+}
+
+
+.home:hover {
+    color: #ffffff; 
+}
+
+.home:hover::after {
+    width: 110%;
+}
+
+.shop{
+    position: relative;
+}
+
+.shop::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease;
+}
+
+.home:hover{
+    color: white;
+}
+
+.shop:hover::after{
+    width: 110%;
+}
+
+.ContactMe{
+    position: relative;
+}
+
+.homeActive, .shopActive, .contactMeActive{
+    transform: scale(1.1);
+    text-decoration: underline 4px;
+    margin-right: 50px;
+}
+
+.ContactMe::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: white;
+    border-radius: 180px;
+    transition: width 0.3s ease;
+}
+
+.ContactMe:hover{
+    color: white;
+}
+
+.ContactMe:hover::after{
+    width: 110%
+}
+
+/**************************
+*  Service Section       *
+**************************/
+
+.imgService{
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+}
+
+.sectionHeader{
+padding: 0;
+font-size: 48px;
+width: fit-content;
+text-align: center;
+height: fit-content;
+margin: 0;
+}
+
+.contentRight{
+    margin-left: 100px;
+}
+
+.description{
+    width: 480px;
+    height: auto;
+    color: white;
+    font-size: 18px;
+    padding: 0;
+    margin-top: 148px;
+}
+
+.btnGetService{
+    background-color: transparent;
+    border: solid 2px #00BBFF;
+    border-radius: 180px;
+    margin-top: 44px;
+    width: auto;
+    height: 46px;
+    color: white;
+    font-size: 18px;
+    font-family: Adlam Display;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: none;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.btnGetService:hover{
+    background-color: #00BBFF;
+    box-shadow: 0px 3px 15px rgba(0, 104, 255, 0.8);
+}
+
+.btnGetService:active{
+    transform: scale(0.9);
+}
+
+/**************************
+*  Form Pop Up            *
+**************************/
+
+.popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 500px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out transform 0.4s ease-in-out;
+    align-items: center;
+}
+
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.frmServices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-content{
+    text-align: center;
+}
+
+.lblInputs{
+    margin-right: 10px;
+    background-color:black;
+
+}
+
+.popup input{
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    
+}
+
+
+
+.popup button{
+    padding: 10px 20px;
+    background-color: cyan;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+}
