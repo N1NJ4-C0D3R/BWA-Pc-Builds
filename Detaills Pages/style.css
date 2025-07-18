@@ -298,3 +298,129 @@ margin: 0;
     text-decoration: none;
     color: white;
 }
+
+/* Default styles remain the same */
+
+/* Tablet view (up to 768px) */
+/* Tablet view (up to 768px) */
+@media (max-width: 768px) {
+    .navBarContainer {
+        width: 95%; /* Take up most of the screen */
+        max-width: 780px; /* Prevent it from getting too wide on larger tablets */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navBarContent {
+        align-items: center;
+        margin-left: 0;
+        padding: 10px 0;
+        justify-content: center; /* Center the navigation items */
+    }
+
+    .home,
+    .shop,
+    .ContactMe {
+        margin-right: 20px; /* Adjust spacing */
+        margin-bottom: 0;
+    }
+
+    .home::after,
+    .shop::after,
+    .ContactMe::after {
+        display: none;
+    }
+
+    .content {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    .contentLeft {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sectionHeader {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .imgService {
+        width: 200px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .contentRight {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .description {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .btnGetService {
+        margin-top: 30px;
+        width: auto; /* Adjust to content width */
+        padding: 12px 30px; /* Adjust padding for better size */
+        font-size: 18px;
+    }
+
+    .popup {
+        width: 80%;
+    }
+
+    .popup input {
+        width: 90%;
+    }
+}
+
+/* Smaller phone view (up to 480px) */
+@media (max-width: 480px) {
+    .sectionHeader {
+        font-size: 28px;
+    }
+
+    .imgService {
+        width: 150px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .btnGetService {
+        font-size: 14px;
+    }
+
+    .popup-content h2 {
+        font-size: 20px;
+    }
+
+    .popup input::placeholder {
+        font-size: 14px;
+    }
+
+    .popup button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+        top: 5px;
+        right: 10px;
+    }
+}
