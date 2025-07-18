@@ -270,3 +270,203 @@ html {
 .buyPc:hover{
     background-color: #00BBFF;
 }
+
+/* Default styles for larger screens remain */
+
+/* Tablet view (up to 768px) */
+@media (max-width: 768px) {
+    .navBarContainer {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Keep navBarContent horizontal on tablets */
+    .navBarContent {
+        align-items: center; /* Vertically center the items */
+        margin-left: 0;
+        padding: 10px 0;
+        justify-content: center; /* Distribute space around items if needed */
+    }
+
+    .home,
+    .shop,
+    .ContactMe {
+        margin-right: 15px; /* Reduce right margin for smaller screens */
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    .home::after,
+    .shop::after,
+    .ContactMe::after {
+        display: none; /* Optionally hide underlines on hover for smaller horizontal nav */
+    }
+
+    .images {
+        width: 95%;
+        height: auto; /* Adjust height automatically */
+        margin-top: 40px;
+    }
+
+    .container1 {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pcName {
+        font-size: 28px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .doubleSection1 {
+        flex-direction: column; /* Stack description and components */
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .pcDescription {
+        width: 95%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        text-align: left; /* Adjust text alignment as needed */
+    }
+
+    .pcComponents {
+        width: 95%;
+    }
+
+    .section2 {
+        flex-direction: column; /* Stack purchase and benchmarks */
+        width: 95%;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .purchase {
+        width: 95%;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .buyPc {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%; /* Make button wider */
+        padding: 10px 30px;
+    }
+
+    .benchMarks {
+        width: 95%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .benchamarksHeading {
+        font-size: 24px;
+    }
+}
+
+/* Smaller phone view (up to 480px) */
+@media (max-width: 480px) {
+    .navBarContainer {
+        flex-direction: column; /* Stack on smaller phones */
+        height: auto; /* Adjust height to content */
+        border-radius: 20px;
+        padding: 10px 0;
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navBarContent {
+        flex-direction: column; /* Stack on smaller phones */
+        align-items: center; /* Center items horizontally */
+        margin-left: 0;
+        width: 100%; /* Take full width to allow centering */
+    }
+
+    .home,
+    .shop,
+    .ContactMe,
+    .homeActive,
+    .shopActive,
+    .contactMeActive {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Make buttons take full width */
+        text-align: center; /* Center the text inside the button */
+    }
+
+    .home::after,
+    .shop::after,
+    .ContactMe::after {
+        display: none; /* Remove hover underlines in vertical layout */
+    }
+
+    .images {
+        border-radius: 20px;
+        width: 95%; /* Ensure it's still responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px; /* Adjust top margin */
+    }
+
+    .pcName {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .pcDescription {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .componentsHeading {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+
+    .buyPc {
+        font-size: 16px;
+    }
+
+    .benchamarksHeading {
+        font-size: 20px;
+    }
+
+    .benchMarks p,
+    .benchMarks h4 {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .images {
+        width: 95%;
+        height: auto;
+        margin-top: 40px;
+    }
+
+}
+
+/* Smaller phone view (up to 480px) */
+@media (max-width: 480px) {
+    
+    .images {
+        border-radius: 20px;
+        width: 95%;
+        height: auto;
+        margin-top: 20px;
+    }
+    
+}
