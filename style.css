@@ -190,7 +190,7 @@ html {
 
 .heroSubHeading {
     width: 580px;
-    height: 210px;
+    height: fit-content;
     font-family: 'Adlam Display';
     font-size: 20px;
     font-weight: 400px;
@@ -612,16 +612,159 @@ html {
 }
 
 
-@media only screen and (max-width: 768px) {
+/* Default styles (for larger screens) remain the same */
 
-    .heroSection{
-        display: flex;
+/* Tablet view (up to 768px) */
+@media (max-width: 768px) {
+    .navBarContainer,
+    .heroSection,
+    .monthlyDrops,
+    .servicesSection,
+    .shopSection,
+    .shopSection2,
+    .disclaimer {
         flex-direction: column;
+        align-items: center;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .heroHeading{
+    .navBarContainer {
+        flex-direction: column; /* Stack on smaller phones */
+        height: auto; /* Adjust height to content */
+        border-radius: 20px;
+        padding: 10px 0;
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navBarContent {
+        flex-direction: column; /* Stack on smaller phones */
+        align-items: center; /* Center items horizontally */
+        margin-left: 0;
+        width: 100%; /* Take full width to allow centering */
+    }
+
+    .home,
+    .shop,
+    .ContactMe,
+    .homeActive,
+    .shopActive,
+    .contactMeActive {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%; /* Make buttons take full width */
+        text-align: center; /* Center the text inside the button */
+    }
+
+    .home::after,
+    .shop::after,
+    .ContactMe::after {
+        display: none; /* Remove hover underlines in vertical layout */
+    }
+
+    .heroSection1,
+    .heroSection2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .customPC,
+    .monthlyDropPic {
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heroSubHeading,
+    .details {
+        text-align: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btnShop,
+    .btnServices {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 80%; /* Make buttons wider on smaller screens */
+    }
+
+    .monthlyDropDetails {
+        width: 90%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .servicesSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicesCard {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .servicesPic {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btnDetails {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .shopBlock {
+        width: 45%; /* Two columns on larger phones/small tablets */
+        margin-bottom: 30px;
+    }
+
+    .contactFormContainer {
+        width: 90%;
+        margin-top: 60px;
+    }
+
+    .contactInputs {
+        width: 90%;
+    }
+
+    .btnSubmit {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Smaller phone view (up to 480px) */
+@media (max-width: 480px) {
+    .shopBlock {
+        width: 90%; /* Single column on smaller phones */
+    }
+
+    .heroHeading {
         font-size: 32px;
     }
 
+    .heroSubHeading {
+        font-size: 16px;
+        line-height: 25px;
+    }
 
+    .dropSectionHeader,
+    .servicesHeading {
+        font-size: 36px;
+    }
+
+    .details {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .servicesSubHeading {
+        font-size: 24px;
+    }
 }
+
